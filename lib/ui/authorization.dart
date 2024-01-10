@@ -138,14 +138,16 @@ class _authorizationState extends State<authorization> {
                       else {
                         ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(
-                              content: Text('Логин или пароль неверны')),
+                              content: Text('Логин или пароль неверны')
+                          ),
                         );
                       }
                     }
                     else{
                       ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(
-                              content: Text('Логин или пароль неверны')),
+                              content: Text('Логин или пароль неверны')
+                          ),
                         );
                       }
                       setState(() {

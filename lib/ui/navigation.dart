@@ -4,6 +4,8 @@ import 'package:cognitivyskills/ui/listgame.dart';
 import 'package:cognitivyskills/ui/resultsUser.dart';
 import 'package:flutter/material.dart';
 
+import 'ListAttempts.dart';
+
 class navigation extends StatefulWidget {
   const navigation({super.key});
 
@@ -74,6 +76,20 @@ class _navigationState extends State<navigation> {
                       }
                     },
                     child: const Icon(Icons.account_box, color: Colors.black),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      try {
+                        Navigator.pushAndRemoveUntil(
+                          context,
+                          MaterialPageRoute(builder: (context) => ListAttempts()),
+                              (route) => false,
+                        );
+                      } catch (e) {
+                        print(e);
+                      }
+                    },
+                    child: const Icon(Icons.abc, color: Colors.black),
                   ),
                 ],
               ),
